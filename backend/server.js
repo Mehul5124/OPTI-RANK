@@ -15,7 +15,7 @@ app.use(express.json());
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/users', userRoutes);
 
-const protectedUserRoutes = require('./routes/protecteduserRoutes');
+const protectedUserRoutes = require('./routes/protectedUserRoutes');
 app.use('/api/user', protectedUserRoutes);
 
 const dashboardRoutes = require('./routes/dashboardRoutes');
