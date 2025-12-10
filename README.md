@@ -73,6 +73,8 @@ A full-stack web application for managing and optimizing digital marketing acros
 - Platform detection
 - Score calculation
 - Recommendations engine
+
+
 **Backend is not Fully Completed**
 ## 📂 Project Structure
 
