@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 📦 FETCH DASHBOARD DATA
     async function loadDashboard(platform, filter, section) {
       try {
-        const res = await fetch(`http://localhost:5000/api/dashboard?platform=${platform}&filter=${filter}`, {
+        const res = await fetch(`https://opti-rank-backend.onrender.com/api/dashboard?platform=${platform}&filter=${filter}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
