@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Resource | OPTI-RANK</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fas fa-graduation-cap"></i> OPTI-RANK Resources</h1>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="seo.html">SEO Audit</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="profile.html"><button class="profile-btn"><i class="fas fa-user"></i></button></a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="resource-header">
+      <button class="back-btn" onclick="window.location.href='learn.html'">
+        <i class="fas fa-arrow-left"></i> Back to Learning
+      </button>
+    </div>
+
+    <article class="resource-container">
+      <div class="resource-title-section">
+        <div class="resource-icon" id="resourceIcon"></div>
+        <h1 id="resourceTitle">Loading...</h1>
+        <p id="resourceDescription"></p>
+      </div>
+
+      <div class="resource-actions">
+        <button class="download-btn" onclick="downloadResource()">
+          <i class="fas fa-download"></i> Download This Resource
+        </button>
+        <button class="print-btn" onclick="window.print()">
+          <i class="fas fa-print"></i> Print
+        </button>
+      </div>
+
+      <div class="resource-content" id="resourceContent"></div>
+    </article>
+  </main>
+
+  <script src="js/resource.js"></script>
+</body>
+</html>

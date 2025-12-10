@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO Audit | OPTI-RANK</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fas fa-search"></i> SEO Audit</h1>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="seo.html">SEO Audit</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="profile.html"><button class="profile-btn"><i class="fas fa-user"></i></button></a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </nav>
+  </header>
+  <main class="main-content">
+    <section id="seo-audit-section">
+      <h2 class="seo-title">SEO Audit Tool</h2>
+      <form id="seoAuditForm">
+        <input type="url" id="seoUrlInput" placeholder="Paste any URL (website, YouTube, Instagram, Facebook)" required />
+        <button type="submit" class="tab-btn">Analyze</button>
+      </form>
+      <div id="seoResults" class="recommendations"></div>
+    </section>
+  </main>
+  <script src="js/seoAudit.js"></script>
+</body>
+</html>

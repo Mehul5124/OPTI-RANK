@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Templates | OPTI-RANK</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fas fa-file-alt"></i> OPTI-RANK Templates</h1>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="seo.html">SEO Audit</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="profile.html"><button class="profile-btn"><i class="fas fa-user"></i></button></a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="templates-hero">
+      <h2>📄 Ready-to-Use Templates</h2>
+      <p>Save time with our professionally designed templates</p>
+    </section>
+
+    <!-- Template Categories -->
+    <div class="category-tabs">
+      <button class="tab-btn active" data-category="all">All Templates</button>
+      <button class="tab-btn" data-category="social">Social Media</button>
+      <button class="tab-btn" data-category="blog">Blog Posts</button>
+      <button class="tab-btn" data-category="email">Email Marketing</button>
+      <button class="tab-btn" data-category="ad">Ad Copy</button>
+      <button class="tab-btn" data-category="seo">SEO Content</button>
+    </div>
+
+    <!-- Templates Grid -->
+    <section class="templates-grid" id="templatesGrid">
+      <!-- Social Media Templates -->
+      <div class="template-card" data-category="social">
+        <div class="template-icon">📸</div>
+        <h3>Instagram Caption Template</h3>
+        <p>Engaging caption structure with hooks and CTAs</p>
+        <div class="template-tags">
+          <span class="tag">Instagram</span>
+          <span class="tag">Social Media</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('instagram-caption')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="social">
+        <div class="template-icon">🎥</div>
+        <h3>YouTube Video Script</h3>
+        <p>Complete video script with intro, body, and outro</p>
+        <div class="template-tags">
+          <span class="tag">YouTube</span>
+          <span class="tag">Video</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('youtube-script')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="social">
+        <div class="template-icon">📘</div>
+        <h3>Facebook Post Template</h3>
+        <p>High-engagement Facebook post structure</p>
+        <div class="template-tags">
+          <span class="tag">Facebook</span>
+          <span class="tag">Social Media</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('facebook-post')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="social">
+        <div class="template-icon">🎬</div>
+        <h3>Reels/TikTok Script</h3>
+        <p>Short-form video content template</p>
+        <div class="template-tags">
+          <span class="tag">TikTok</span>
+          <span class="tag">Reels</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('reels-script')">Use Template</button>
+      </div>
+
+      <!-- Blog Templates -->
+      <div class="template-card" data-category="blog">
+        <div class="template-icon">✍️</div>
+        <h3>How-To Blog Post</h3>
+        <p>Step-by-step tutorial blog structure</p>
+        <div class="template-tags">
+          <span class="tag">Blog</span>
+          <span class="tag">Tutorial</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('howto-blog')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="blog">
+        <div class="template-icon">📝</div>
+        <h3>Listicle Blog Post</h3>
+        <p>"Top 10" style blog post template</p>
+        <div class="template-tags">
+          <span class="tag">Blog</span>
+          <span class="tag">Listicle</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('listicle-blog')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="blog">
+        <div class="template-icon">💭</div>
+        <h3>Opinion/Editorial Post</h3>
+        <p>Thought leadership blog template</p>
+        <div class="template-tags">
+          <span class="tag">Blog</span>
+          <span class="tag">Opinion</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('opinion-blog')">Use Template</button>
+      </div>
+
+      <!-- Email Templates -->
+      <div class="template-card" data-category="email">
+        <div class="template-icon">📧</div>
+        <h3>Welcome Email Series</h3>
+        <p>New subscriber onboarding emails</p>
+        <div class="template-tags">
+          <span class="tag">Email</span>
+          <span class="tag">Welcome</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('welcome-email')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="email">
+        <div class="template-icon">🎁</div>
+        <h3>Promotional Email</h3>
+        <p>Product/service promotion template</p>
+        <div class="template-tags">
+          <span class="tag">Email</span>
+          <span class="tag">Promo</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('promo-email')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="email">
+        <div class="template-icon">📰</div>
+        <h3>Newsletter Template</h3>
+        <p>Weekly/monthly newsletter structure</p>
+        <div class="template-tags">
+          <span class="tag">Email</span>
+          <span class="tag">Newsletter</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('newsletter')">Use Template</button>
+      </div>
+
+      <!-- Ad Copy Templates -->
+      <div class="template-card" data-category="ad">
+        <div class="template-icon">🎯</div>
+        <h3>Facebook Ad Copy</h3>
+        <p>High-converting Facebook ad template</p>
+        <div class="template-tags">
+          <span class="tag">Ads</span>
+          <span class="tag">Facebook</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('facebook-ad')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="ad">
+        <div class="template-icon">🔍</div>
+        <h3>Google Ad Copy</h3>
+        <p>Search ad headline and description template</p>
+        <div class="template-tags">
+          <span class="tag">Ads</span>
+          <span class="tag">Google</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('google-ad')">Use Template</button>
+      </div>
+
+      <!-- SEO Content Templates -->
+      <div class="template-card" data-category="seo">
+        <div class="template-icon">🎯</div>
+        <h3>Product Page SEO</h3>
+        <p>SEO-optimized product description template</p>
+        <div class="template-tags">
+          <span class="tag">SEO</span>
+          <span class="tag">E-commerce</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('product-seo')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="seo">
+        <div class="template-icon">🏢</div>
+        <h3>Service Page Template</h3>
+        <p>SEO-friendly service page structure</p>
+        <div class="template-tags">
+          <span class="tag">SEO</span>
+          <span class="tag">Services</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('service-page')">Use Template</button>
+      </div>
+
+      <div class="template-card" data-category="seo">
+        <div class="template-icon">📍</div>
+        <h3>Local SEO Page</h3>
+        <p>Location-based landing page template</p>
+        <div class="template-tags">
+          <span class="tag">SEO</span>
+          <span class="tag">Local</span>
+        </div>
+        <button class="use-template-btn" onclick="useTemplate('local-seo')">Use Template</button>
+      </div>
+    </section>
+
+    <!-- Template Preview Modal -->
+    <div id="templateModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modalTitle">Template Name</h2>
+        <div id="modalBody" class="modal-body"></div>
+        <div class="modal-actions">
+          <button class="copy-btn" onclick="copyTemplate()"><i class="fas fa-copy"></i> Copy to Clipboard</button>
+          <button class="download-btn" onclick="downloadTemplate()"><i class="fas fa-download"></i> Download</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/templates.js"></script>
+</body>
+</html>

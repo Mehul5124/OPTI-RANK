@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn | OPTI-RANK</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fas fa-graduation-cap"></i> OPTI-RANK Learning</h1>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="seo.html">SEO Audit</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="profile.html"><button class="profile-btn"><i class="fas fa-user"></i></button></a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="learn-hero">
+      <h2>📚 Master Digital Marketing & SEO</h2>
+      <p>Learn from industry experts and boost your online presence</p>
+    </section>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="learnSearchInput" placeholder="Search courses, tutorials, guides..." />
+      <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <button class="tab-btn active" data-category="all">All</button>
+      <button class="tab-btn" data-category="seo">SEO</button>
+      <button class="tab-btn" data-category="social-media">Social Media</button>
+      <button class="tab-btn" data-category="content">Content Marketing</button>
+      <button class="tab-btn" data-category="analytics">Analytics</button>
+      <button class="tab-btn" data-category="video">Video Marketing</button>
+    </div>
+
+    <!-- Learning Content Grid -->
+    <section class="learning-grid" id="learningGrid">
+      <!-- SEO Courses -->
+      <div class="learning-card" data-category="seo">
+        <div class="card-icon">🎯</div>
+        <h3>SEO Fundamentals</h3>
+        <p>Master the basics of Search Engine Optimization</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 2 hours</span>
+          <span><i class="fas fa-signal"></i> Beginner</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('seo-fundamentals')">Start Learning</button>
+      </div>
+
+      <div class="learning-card" data-category="seo">
+        <div class="card-icon">🔍</div>
+        <h3>Keyword Research Mastery</h3>
+        <p>Find the right keywords to rank higher on Google</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 3 hours</span>
+          <span><i class="fas fa-signal"></i> Intermediate</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('keyword-research')">Start Learning</button>
+      </div>
+
+      <div class="learning-card" data-category="seo">
+        <div class="card-icon">🏗️</div>
+        <h3>Technical SEO</h3>
+        <p>Optimize your website's technical foundation</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 4 hours</span>
+          <span><i class="fas fa-signal"></i> Advanced</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('technical-seo')">Start Learning</button>
+      </div>
+
+      <!-- Social Media Courses -->
+      <div class="learning-card" data-category="social-media">
+        <div class="card-icon">📸</div>
+        <h3>Instagram Marketing 2025</h3>
+        <p>Grow your Instagram following organically</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 2.5 hours</span>
+          <span><i class="fas fa-signal"></i> Beginner</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('instagram-marketing')">Start Learning</button>
+      </div>
+
+      <div class="learning-card" data-category="social-media">
+        <div class="card-icon">📘</div>
+        <h3>Facebook Ads Strategy</h3>
+        <p>Create high-converting Facebook ad campaigns</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 3 hours</span>
+          <span><i class="fas fa-signal"></i> Intermediate</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('facebook-ads')">Start Learning</button>
+      </div>
+
+      <div class="learning-card" data-category="social-media">
+        <div class="card-icon">🐦</div>
+        <h3>Twitter/X Growth Hacking</h3>
+        <p>Build an engaged Twitter audience fast</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 1.5 hours</span>
+          <span><i class="fas fa-signal"></i> Beginner</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('twitter-growth')">Start Learning</button>
+      </div>
+
+      <!-- Content Marketing -->
+      <div class="learning-card" data-category="content">
+        <div class="card-icon">✍️</div>
+        <h3>Content Writing for SEO</h3>
+        <p>Write content that ranks and converts</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 2 hours</span>
+          <span><i class="fas fa-signal"></i> Beginner</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('content-writing')">Start Learning</button>
+      </div>
+
+      <div class="learning-card" data-category="content">
+        <div class="card-icon">🎨</div>
+        <h3>Visual Content Creation</h3>
+        <p>Design eye-catching graphics for social media</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 3 hours</span>
+          <span><i class="fas fa-signal"></i> Intermediate</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('visual-content')">Start Learning</button>
+      </div>
+
+      <!-- Analytics -->
+      <div class="learning-card" data-category="analytics">
+        <div class="card-icon">📊</div>
+        <h3>Google Analytics 4</h3>
+        <p>Track and analyze your website traffic</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 2.5 hours</span>
+          <span><i class="fas fa-signal"></i> Beginner</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('google-analytics')">Start Learning</button>
+      </div>
+
+      <div class="learning-card" data-category="analytics">
+        <div class="card-icon">📈</div>
+        <h3>Data-Driven Marketing</h3>
+        <p>Make decisions based on analytics data</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 4 hours</span>
+          <span><i class="fas fa-signal"></i> Advanced</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('data-marketing')">Start Learning</button>
+      </div>
+
+      <!-- Video Marketing -->
+      <div class="learning-card" data-category="video">
+        <div class="card-icon">🎥</div>
+        <h3>YouTube SEO & Growth</h3>
+        <p>Optimize videos to get more views and subscribers</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 3 hours</span>
+          <span><i class="fas fa-signal"></i> Intermediate</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('youtube-seo')">Start Learning</button>
+      </div>
+
+      <div class="learning-card" data-category="video">
+        <div class="card-icon">🎬</div>
+        <h3>Short-Form Video Strategy</h3>
+        <p>Master Reels, TikTok, and YouTube Shorts</p>
+        <div class="card-meta">
+          <span><i class="fas fa-clock"></i> 2 hours</span>
+          <span><i class="fas fa-signal"></i> Beginner</span>
+        </div>
+        <button class="start-btn" onclick="openCourse('short-video')">Start Learning</button>
+      </div>
+    </section>
+
+    <!-- Free Resources Section -->
+    <section class="resources-section">
+      <h2>📖 Free Resources</h2>
+      <div class="resources-grid">
+        <div class="resource-item">
+          <i class="fas fa-book"></i>
+          <h4>SEO Checklist 2025</h4>
+          <a href="#" class="download-link">Download PDF</a>
+        </div>
+        <div class="resource-item">
+          <i class="fas fa-calendar"></i>
+          <h4>Social Media Calendar</h4>
+          <a href="#" class="download-link">Download Template</a>
+        </div>
+        <div class="resource-item">
+          <i class="fas fa-hashtag"></i>
+          <h4>Hashtag Research Guide</h4>
+          <a href="#" class="download-link">Download PDF</a>
+        </div>
+        <div class="resource-item">
+          <i class="fas fa-chart-line"></i>
+          <h4>Analytics Dashboard Template</h4>
+          <a href="#" class="download-link">Download Excel</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/learn.js"></script>
+</body>
+</html>

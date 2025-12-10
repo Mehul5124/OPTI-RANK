@@ -1,0 +1,91 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPTI-RANK Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <h1><i class="fas fa-chart-line"></i> OPTI - RANK</h1>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="seo.html">SEO Audit</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="profile.html"><button class="profile-btn"><i class="fas fa-user"></i></button></a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </nav>
+  </header>
+    <main class="main-content">
+      <h2 id="welcomeMessage" class="welcome">Welcome!</h2>
+        <h2>Dashboard</h2>
+      
+        <!-- Platform: Website -->
+        <div class="platform-section" data-platform="website">
+          <h3>🌐 Website</h3>
+          <div class="timeframe-buttons">
+            <button>1hr</button>
+            <button>1d</button>
+            <button>15d</button>
+            <button>30d</button>
+          </div>
+          <div class="recommendation-box">
+            <span>💡</span> Smart Recommendations for Website
+          </div>
+        </div>
+      
+        <!-- Platform: Instagram -->
+        <div class="platform-section" data-platform="instagram">
+          <h3>📸 Instagram</h3>
+          <div class="timeframe-buttons">
+            <button>1hr</button>
+            <button>1d</button>
+            <button>15d</button>
+            <button>30d</button>
+          </div>
+          <div class="recommendation-box">
+            <span>💡</span> Smart Recommendations for Instagram
+          </div>
+        </div>
+      
+        <!-- Platform: Facebook -->
+        <div class="platform-section" data-platform="facebook">
+          <h3>📘 Facebook</h3>
+          <div class="timeframe-buttons">
+            <button>1hr</button>
+            <button>1d</button>
+            <button>15d</button>
+            <button>30d</button>
+          </div>
+          <div class="recommendation-box">
+            <span>💡</span> Smart Recommendations for Facebook
+          </div>
+        </div>
+      
+        <!-- Platform: YouTube -->
+        <div class="platform-section" data-platform="youtube">
+          <h3>📺 YouTube</h3>
+          <div class="timeframe-buttons">
+            <button>1hr</button>
+            <button>1d</button>
+            <button>15d</button>
+            <button>30d</button>
+          </div>
+          <div class="recommendation-box">
+            <span>💡</span> Smart Recommendations for YouTube
+          </div>
+        </div>
+      </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | OPTI-RANK</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fas fa-user-circle"></i> My Profile</h1>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="seo.html">SEO Audit</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="profile.html"><button class="profile-btn active"><i class="fas fa-user"></i></button></a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="profile-container">
+      <div class="profile-sidebar">
+        <div class="profile-avatar">
+          <i class="fas fa-user-circle"></i>
+          <h3 id="profileUsername">Loading...</h3>
+          <p id="profileEmail">user@example.com</p>
+        </div>
+        
+        <nav class="profile-nav">
+          <button class="profile-nav-btn active" data-section="account">
+            <i class="fas fa-user"></i> Account Settings
+          </button>
+          <button class="profile-nav-btn" data-section="platforms">
+            <i class="fas fa-link"></i> Connected Platforms
+          </button>
+          <button class="profile-nav-btn" data-section="preferences">
+            <i class="fas fa-cog"></i> Preferences
+          </button>
+          <button class="profile-nav-btn" data-section="billing">
+            <i class="fas fa-credit-card"></i> Billing
+          </button>
+          <button class="profile-nav-btn" data-section="security">
+            <i class="fas fa-shield-alt"></i> Security
+          </button>
+        </nav>
+      </div>
+
+      <div class="profile-main">
+        <!-- Account Settings Section -->
+        <section class="profile-section active" id="account-section">
+          <h2>Account Settings</h2>
+          
+          <form class="profile-form" id="accountForm">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="fullName" placeholder="Enter your full name" />
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="email" placeholder="your.email@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="phone" placeholder="+1 (555) 123-4567" />
+            </div>
+
+            <div class="form-group">
+              <label>Company/Business Name</label>
+              <input type="text" id="company" placeholder="Your company name" />
+            </div>
+
+            <div class="form-group">
+              <label>Bio</label>
+              <textarea id="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+            </div>
+
+            <button type="submit" class="save-btn">Save Changes</button>
+          </form>
+        </section>
+
+        <!-- Connected Platforms Section -->
+        <section class="profile-section" id="platforms-section">
+          <h2>Connected Platforms</h2>
+          <p class="section-desc">Link your social media and marketing platforms for integrated analytics</p>
+
+          <div class="platforms-list">
+            <div class="platform-item">
+              <div class="platform-info">
+                <i class="fab fa-google" style="color: #4285F4;"></i>
+                <div>
+                  <h4>Google Analytics</h4>
+                  <p>Track website performance</p>
+                </div>
+              </div>
+              <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="platform-item connected">
+              <div class="platform-info">
+                <i class="fab fa-instagram" style="color: #E4405F;"></i>
+                <div>
+                  <h4>Instagram</h4>
+                  <p>Connected as @yourhandle</p>
+                </div>
+              </div>
+              <button class="disconnect-btn">Disconnect</button>
+            </div>
+
+            <div class="platform-item">
+              <div class="platform-info">
+                <i class="fab fa-facebook" style="color: #1877F2;"></i>
+                <div>
+                  <h4>Facebook</h4>
+                  <p>Manage pages and ads</p>
+                </div>
+              </div>
+              <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="platform-item">
+              <div class="platform-info">
+                <i class="fab fa-youtube" style="color: #FF0000;"></i>
+                <div>
+                  <h4>YouTube</h4>
+                  <p>Track video performance</p>
+                </div>
+              </div>
+              <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="platform-item">
+              <div class="platform-info">
+                <i class="fab fa-twitter" style="color: #1DA1F2;"></i>
+                <div>
+                  <h4>Twitter/X</h4>
+                  <p>Monitor tweets and engagement</p>
+                </div>
+              </div>
+              <button class="connect-btn">Connect</button>
+            </div>
+
+            <div class="platform-item">
+              <div class="platform-info">
+                <i class="fab fa-linkedin" style="color: #0A66C2;"></i>
+                <div>
+                  <h4>LinkedIn</h4>
+                  <p>Professional networking analytics</p>
+                </div>
+              </div>
+              <button class="connect-btn">Connect</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Preferences Section -->
+        <section class="profile-section" id="preferences-section">
+          <h2>Preferences</h2>
+          
+          <form class="profile-form" id="preferencesForm">
+            <div class="form-group">
+              <label>Dashboard Default View</label>
+              <select id="defaultView">
+                <option value="all">All Platforms</option>
+                <option value="website">Website Only</option>
+                <option value="social">Social Media Only</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Default Time Range</label>
+              <select id="defaultTimeRange">
+                <option value="1d">Last 24 Hours</option>
+                <option value="7d" selected>Last 7 Days</option>
+                <option value="30d">Last 30 Days</option>
+                <option value="90d">Last 90 Days</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Language</label>
+              <select id="language">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Timezone</label>
+              <select id="timezone">
+                <option value="UTC">UTC</option>
+                <option value="EST">Eastern Time (EST)</option>
+                <option value="PST">Pacific Time (PST)</option>
+                <option value="CST">Central Time (CST)</option>
+              </select>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" id="emailNotifications" checked />
+                Email Notifications
+              </label>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" id="weeklyReports" checked />
+                Weekly Performance Reports
+              </label>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" id="tipsNewsletter" checked />
+                Marketing Tips Newsletter
+              </label>
+            </div>
+
+            <button type="submit" class="save-btn">Save Preferences</button>
+          </form>
+        </section>
+
+        <!-- Billing Section -->
+        <section class="profile-section" id="billing-section">
+          <h2>Billing & Subscription</h2>
+          
+          <div class="billing-info">
+            <div class="current-plan">
+              <h3>Current Plan</h3>
+              <div class="plan-card">
+                <h4>Free Plan</h4>
+                <p class="plan-price">$0/month</p>
+                <ul class="plan-features">
+                  <li><i class="fas fa-check"></i> Basic Dashboard</li>
+                  <li><i class="fas fa-check"></i> 1 Platform</li>
+                  <li><i class="fas fa-check"></i> Weekly Reports</li>
+                  <li><i class="fas fa-times"></i> Advanced Analytics</li>
+                  <li><i class="fas fa-times"></i> API Access</li>
+                </ul>
+                <button class="upgrade-btn">Upgrade to Pro</button>
+              </div>
+            </div>
+
+            <div class="upgrade-options">
+              <h3>Available Plans</h3>
+              
+              <div class="plan-card">
+                <h4>Pro Plan</h4>
+                <p class="plan-price">$29/month</p>
+                <ul class="plan-features">
+                  <li><i class="fas fa-check"></i> All Platforms</li>
+                  <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                  <li><i class="fas fa-check"></i> Daily Reports</li>
+                  <li><i class="fas fa-check"></i> Priority Support</li>
+                  <li><i class="fas fa-check"></i> Export Data</li>
+                </ul>
+                <button class="select-plan-btn">Select Plan</button>
+              </div>
+
+              <div class="plan-card featured">
+                <span class="badge">Popular</span>
+                <h4>Business Plan</h4>
+                <p class="plan-price">$79/month</p>
+                <ul class="plan-features">
+                  <li><i class="fas fa-check"></i> Everything in Pro</li>
+                  <li><i class="fas fa-check"></i> Team Collaboration</li>
+                  <li><i class="fas fa-check"></i> API Access</li>
+                  <li><i class="fas fa-check"></i> Custom Reports</li>
+                  <li><i class="fas fa-check"></i> White Label</li>
+                </ul>
+                <button class="select-plan-btn">Select Plan</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Security Section -->
+        <section class="profile-section" id="security-section">
+          <h2>Security Settings</h2>
+          
+          <form class="profile-form" id="securityForm">
+            <h3>Change Password</h3>
+            
+            <div class="form-group">
+              <label>Current Password</label>
+              <input type="password" id="currentPassword" placeholder="Enter current password" />
+            </div>
+
+            <div class="form-group">
+              <label>New Password</label>
+              <input type="password" id="newPassword" placeholder="Enter new password" />
+            </div>
+
+            <div class="form-group">
+              <label>Confirm New Password</label>
+              <input type="password" id="confirmPassword" placeholder="Confirm new password" />
+            </div>
+
+            <button type="submit" class="save-btn">Update Password</button>
+          </form>
+
+          <hr />
+
+          <h3>Two-Factor Authentication</h3>
+          <p>Add an extra layer of security to your account</p>
+          <button class="enable-2fa-btn">Enable 2FA</button>
+
+          <hr />
+
+          <h3>Active Sessions</h3>
+          <div class="sessions-list">
+            <div class="session-item">
+              <div class="session-info">
+                <i class="fas fa-desktop"></i>
+                <div>
+                  <h4>Windows PC - Chrome</h4>
+                  <p>Last active: Just now</p>
+                  <p>Location: New York, USA</p>
+                </div>
+              </div>
+              <span class="current-session">Current Session</span>
+            </div>
+          </div>
+
+          <hr />
+
+          <h3>Danger Zone</h3>
+          <button class="delete-account-btn">Delete Account</button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>

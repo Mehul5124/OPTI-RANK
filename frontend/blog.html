@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | OPTI-RANK</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><i class="fas fa-blog"></i> OPTI-RANK Blog</h1>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="seo.html">SEO Audit</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="profile.html"><button class="profile-btn"><i class="fas fa-user"></i></button></a>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="blog-hero">
+      <h2>📰 Latest Marketing Insights</h2>
+      <p>Stay updated with the latest trends, tips, and strategies</p>
+    </section>
+
+    <!-- Search and Filter -->
+    <div class="blog-controls">
+      <div class="search-container">
+        <input type="text" id="blogSearchInput" placeholder="Search articles..." />
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div class="category-tabs">
+        <button class="tab-btn active" data-category="all">All Posts</button>
+        <button class="tab-btn" data-category="seo">SEO</button>
+        <button class="tab-btn" data-category="social-media">Social Media</button>
+        <button class="tab-btn" data-category="content">Content Marketing</button>
+        <button class="tab-btn" data-category="analytics">Analytics</button>
+        <button class="tab-btn" data-category="trends">Trends</button>
+      </div>
+    </div>
+
+    <!-- Featured Post -->
+    <section class="featured-post">
+      <div class="featured-image">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&q=80" alt="SEO Analytics" />
+      </div>
+      <div class="featured-content">
+        <span class="featured-badge">Featured</span>
+        <span class="blog-category">SEO</span>
+        <h2>How to Rank #1 on Google in 2025: Complete Guide</h2>
+        <p>Discover the latest SEO strategies that are actually working in 2025. From AI-powered content to E-E-A-T signals, learn everything you need to dominate search rankings.</p>
+        <div class="blog-meta">
+          <span><i class="fas fa-calendar"></i> Dec 8, 2025</span>
+          <span><i class="fas fa-clock"></i> 10 min read</span>
+          <span><i class="fas fa-user"></i> Sarah Johnson</span>
+        </div>
+        <button class="read-more-btn" onclick="openBlogPost('featured-seo-2025')">Read Full Article</button>
+      </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-grid" id="blogGrid">
+      <!-- SEO Posts -->
+      <article class="blog-card" data-category="seo">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">SEO</span>
+        </div>
+        <div class="blog-content">
+          <h3>10 SEO Mistakes That Are Killing Your Rankings</h3>
+          <p>Avoid these common SEO pitfalls that could be preventing your website from ranking higher on Google.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Dec 5, 2025</span>
+            <span><i class="fas fa-clock"></i> 7 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('seo-mistakes')">Read More</button>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="seo">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">SEO</span>
+        </div>
+        <div class="blog-content">
+          <h3>Keyword Research in 2025: Tools & Strategies</h3>
+          <p>Master the art of finding profitable keywords with these advanced research techniques and tools.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Dec 3, 2025</span>
+            <span><i class="fas fa-clock"></i> 8 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('keyword-research')">Read More</button>
+        </div>
+      </article>
+
+      <!-- Social Media Posts -->
+      <article class="blog-card" data-category="social-media">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">Social Media</span>
+        </div>
+        <div class="blog-content">
+          <h3>Instagram Algorithm 2025: What Really Works</h3>
+          <p>Crack the Instagram algorithm with these proven strategies to boost your reach and engagement.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Dec 1, 2025</span>
+            <span><i class="fas fa-clock"></i> 6 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('instagram-algorithm')">Read More</button>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="social-media">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">Social Media</span>
+        </div>
+        <div class="blog-content">
+          <h3>How to Create Viral Reels: 7 Proven Formulas</h3>
+          <p>Learn the exact formulas top creators use to create viral short-form video content.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Nov 28, 2025</span>
+            <span><i class="fas fa-clock"></i> 5 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('viral-reels')">Read More</button>
+        </div>
+      </article>
+
+      <!-- Content Marketing -->
+      <article class="blog-card" data-category="content">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">Content Marketing</span>
+        </div>
+        <div class="blog-content">
+          <h3>Content Marketing Strategy That Actually Converts</h3>
+          <p>Build a content strategy that drives traffic, generates leads, and increases sales.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Nov 25, 2025</span>
+            <span><i class="fas fa-clock"></i> 9 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('content-strategy')">Read More</button>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="content">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">Content Marketing</span>
+        </div>
+        <div class="blog-content">
+          <h3>AI Content Writing: Best Practices for 2025</h3>
+          <p>How to use AI tools effectively while maintaining quality and authenticity in your content.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Nov 22, 2025</span>
+            <span><i class="fas fa-clock"></i> 7 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('ai-content')">Read More</button>
+        </div>
+      </article>
+
+      <!-- Analytics -->
+      <article class="blog-card" data-category="analytics">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">Analytics</span>
+        </div>
+        <div class="blog-content">
+          <h3>Google Analytics 4: Complete Setup Guide</h3>
+          <p>Step-by-step guide to setting up and understanding GA4 for better data insights.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Nov 20, 2025</span>
+            <span><i class="fas fa-clock"></i> 12 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('ga4-guide')">Read More</button>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="analytics">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">Analytics</span>
+        </div>
+        <div class="blog-content">
+          <h3>10 Marketing Metrics You Should Track in 2025</h3>
+          <p>Focus on these key metrics to measure and improve your marketing performance.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Nov 18, 2025</span>
+            <span><i class="fas fa-clock"></i> 6 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('marketing-metrics')">Read More</button>
+        </div>
+      </article>
+
+      <!-- Trends -->
+      <article class="blog-card" data-category="trends">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">Trends</span>
+        </div>
+        <div class="blog-content">
+          <h3>Top 15 Digital Marketing Trends for 2025</h3>
+          <p>Stay ahead of the curve with these emerging marketing trends and technologies.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Nov 15, 2025</span>
+            <span><i class="fas fa-clock"></i> 11 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('marketing-trends-2025')">Read More</button>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="trends">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">Trends</span>
+        </div>
+        <div class="blog-content">
+          <h3>AI in Marketing: Opportunities & Challenges</h3>
+          <p>How artificial intelligence is transforming digital marketing and what it means for marketers.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Nov 12, 2025</span>
+            <span><i class="fas fa-clock"></i> 10 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('ai-marketing')">Read More</button>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="social-media">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">Social Media</span>
+        </div>
+        <div class="blog-content">
+          <h3>TikTok Marketing Guide for Businesses</h3>
+          <p>Everything you need to know to succeed on TikTok as a business in 2025.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Nov 10, 2025</span>
+            <span><i class="fas fa-clock"></i> 8 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('tiktok-guide')">Read More</button>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="seo">
+        <div class="blog-image">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Blog" />
+          <span class="category-badge">SEO</span>
+        </div>
+        <div class="blog-content">
+          <h3>Link Building Strategies That Work in 2025</h3>
+          <p>Ethical and effective link building tactics to boost your domain authority.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> Nov 8, 2025</span>
+            <span><i class="fas fa-clock"></i> 9 min</span>
+          </div>
+          <button class="read-more-btn" onclick="openBlogPost('link-building')">Read More</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Load More -->
+    <div class="load-more-container">
+      <button class="load-more-btn" id="loadMoreBtn">Load More Articles</button>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+      <h2>📬 Subscribe to Our Newsletter</h2>
+      <p>Get weekly marketing tips and insights delivered to your inbox</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/blog.js"></script>
+</body>
+</html>
