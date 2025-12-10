@@ -25,9 +25,9 @@ const seoRoutes = require('./routes/seoRoutes');
 app.use('/api/seo', seoRoutes);
 
 
-// ✅ Changed from GET to POST
-app.post('/', (req, res) => {
-  res.send('🎉 Welcome to OPTI-RANK Backend!');
+// Health check route
+app.get('/', (req, res) => {
+  res.send('🎉 OPTI-RANK Backend API is running!');
 });
 
 const PORT = process.env.PORT || 5000;
